@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chawarmaz | Authentique & Savoureux</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        :root {
+            --primary: #ff6b00;
+            --primary-dark: #e05e00;
+            --secondary: #25d366;
+            --dark: #111111;
+            --light: #f9f9f9;
+            --gray: #666666;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        /* Hero Section */
+        header {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1561651823-34fed022540d?q=80&w=1200&auto=format&fit=crop') no-repeat center center/cover;
+            height: 50vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+
+        .logo-placeholder {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+        
+        .logo-placeholder span {
+            color: #ffffff;
+            background: var(--primary);
+            padding: 0 10px;
+            border-radius: 5px;
+            margin-left: 5px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+        }
+
+        .rating {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Container */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 30px 15px;
+        }
+
+        /* Info Cards */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 15px;
+            margin-top: -50px;
+            margin-bottom: 40px;
+        }
+
+        .info-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .info-card i {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 12px;
+        }
+
+        .info-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 6px;
+            color: var(--dark);
+        }
+
+        .info-card p {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        /* Menu Section */
+        .menu-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            position: relative;
+        }
+
+        .menu-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--primary);
+            margin: 8px auto 0;
+            border-radius: 2px;
+        }
+
+        .category-section {
+            background: white;
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            margin-bottom: 30px;
+        }
+
+        .category-title {
+            font-size: 1.4rem;
+            color: var(--primary);
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .menu-list {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+
+        @media (min-width: 768px) {
+            .menu-list {
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+            }
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px dashed #eeeeee;
+        }
+
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+
+        .item-details h4 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .item-details p {
+            font-size: 0.85rem;
+            color: var(--gray);
+        }
+
+        .item-price {
+            font-weight: 700;
+            color: var(--dark);
+            font-size: 1.1rem;
+            white-space: nowrap;
+            background: #fff5ee;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+
+        /* Suppléments Grid unique */
+        .supplements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            gap: 12px;
+        }
+
+        .supp-item {
+            background: #fdfdfd;
+            border: 1px solid #f0f0f0;
+            padding: 12px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .supp-item h4 {
+            font-size: 0.95rem;
+            margin-bottom: 4px;
+        }
+
+        /* Floating WhatsApp Call To Action */
+        .cta-box {
+            background: linear-gradient(135deg, #111111, #222222);
+            color: white;
+            padding: 35px 25px;
+            border-radius: 16px;
+            text-align: center;
+            margin-top: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .cta-box h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .cta-box p {
+            color: #cccccc;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .btn-whatsapp {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background-color: var(--secondary);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .btn-whatsapp:hover {
+            transform: translateY(-2px);
+            background-color: #20ba5a;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--gray);
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 480px) {
+            header h1 { font-size: 2.2rem; }
+            .info-grid { grid-template-columns: 1fr; margin-top: -30px; }
+            .category-section { padding: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-placeholder">Chawarma<span>Z</span></div>
+        <p>Authentique & Savoureux — Casablanca</p>
+        <div class="rating"><i class="fas fa-star" style="color: #ffb100;"></i> 4.2 (143 Avis)</div>
+    </header>
+
+    <div class="container">
+        
+        <div class="info-grid">
+            <div class="info-card">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Adresse</h3>
+                <p>12 Bd Oued Oum Rabia, Oulfa, Casablanca</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-clock"></i>
+                <h3>Horaires</h3>
+                <p>Ouvert tous les jours<br>De 12:00 à 00:00</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-phone-alt"></i>
+                <h3>Contact & Commandes</h3>
+                <p>06 79 60 24 92</p>
+            </div>
+        </div>
+
+        <h2 class="menu-title">Notre Menu</h2>
+
+        <div class="category-section">
+            <h3 class="category-title"><i class="fas fa-fire"></i> Les Z</h3>
+            <div class="menu-list">
+                <div class="menu-item">
+                    <div class="item-details"><h4>Chawarma Z</h4></div>
+                    <div class="item-price">15 DH</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-details"><h4>Chawarmaz Z Cheddar</h4></div>
+                    <div class="item-price">17 DH</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-details"><h4>Chawarma Z Jalapeños</h4></div>
+                    <div class="item-price">17 DH</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-details"><h4>Chawarma Z Royal</h4></div>
+                    <div class="item-price">19 DH</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-details"><h4>Tacos Z</h4></div>
+                    <div class="item-price">18 DH</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="category-section">
+            <h3 class="category-title"><i class="fas fa-wrapped"></i> Chawarma</h3>
+            <div class="menu-list">
+                <div class="menu-item">
+                    <div class="item-details"><h4>Chawarma Z</h4></div>
+                    <div class="item-price">15 DH</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-details"><h4>Chawarma Normal</h4></div>
+                    <div class="item-price">23 DH</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-details"><h4>Chawarma Double Cheddar</h4></div>
+                    <div class="item-price">28 DH</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-details"><h4>Chawarma Jalapeños</h4></div>
+                    <div class="item-price">29 DH</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-details"><h4>Chawarma Super</h4></div>
+                    <div class="item-price">30 DH</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-details"><h4>Chawarma Crispy</h4></div>
+                    <div class="item-price">30 DH</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-details"><h4>Chawarma Royal Jalapeños Cheddar</h4></div>
+                    <div class="item-price">31 DH</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-details"><h4>Chawarma Super Double Cheddar</h4></div>
+                    <div class="item-price">34 DH</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-details"><h4>Chawarma Super Jalapeños</h4></div>
+                    <div class="item-price">34 DH</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-details"><h4>Chawarma Super Royal Jalapeños Cheddar</h4></div>
+                    <div class="item-price">36 DH</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="category-section">
+            <h3 class="category-title"><i class="fas fa-cube"></i> Tacos</h3>
+            <div class="menu-list">
+                <div class="menu-item">
+                    <div class="item-details"><h4>Tacos Chawarma</h4></div>
+                    <div class="item-price">26 DH</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-details"><h4>Tacos Nugget</h4></div>
+                    <div class="item-price">28 DH</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-details"><h4>Tacos Crispy</h4></div>
+                    <div class="item-price">30 DH</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="category-section">
+            <h3 class="category-title"><i class="fas fa-utensils"></i> Plats</h3>
+            <div class="menu-list">
+                <div class="menu-item">
+                    <div class="item-details"><h4>Bowl Chawarma</h4></div>
+                    <div class="item-price">30 DH</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-details"><h4>Plat Nuggets Épicé</h4></div>
+                    <div class="item-price">36 DH</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-details"><h4>Plat Chawarma</h4></div>
+                    <div class="item-price">40 DH</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-details"><h4>Plat Arabi</h4></div>
+                    <div class="item-price">40 DH</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-details"><h4>Plat Crispy</h4></div>
+                    <div class="item-price">40 DH</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="category-section">
+            <h3 class="category-title"><i class="fas fa-leaf"></i> Salades</h3>
+            <div class="menu-list">
+                <div class="menu-item">
+                    <div class="item-details">
+                        <h4>Salade aux Pâtes</h4>
+                        <p>Pâtes, thon, charcuterie, maïs, olive noire</p>
+                    </div>
+                    <div class="item-price">18 DH</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-details">
+                        <h4>Salade Chawarma</h4>
+                        <p>Pâtes, chawarma, sauce maison, maïs, olive noire</p>
+                    </div>
+                    <div class="item-price">23 DH</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="category-section">
+            <h3 class="category-title"><i class="fas fa-plus-circle"></i> Suppléments</h3>
+            <div class="supplements-grid">
+                <div class="supp-item">
+                    <h4>Boisson</h4>
+                    <div class="item-price" style="display:inline-block; margin-top:5px;">7 DH</div>
+                </div>
+                <div class="supp-item">
+                    <h4>Frite</h4>
+                    <div class="item-price" style="display:inline-block; margin-top:5px;">8 DH</div>
+                </div>
+                <div class="supp-item">
+                    <h4>Menu</h4>
+                    <div class="item-price" style="display:inline-block; margin-top:5px;">14 DH</div>
+                </div>
+                <div class="supp-item">
+                    <h4>Eau</h4>
+                    <div class="item-price" style="display:inline-block; margin-top:5px;">7 DH</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-box">
+            <h3>Une faim de loup ?</h3>
+            <p>Commandez directement via WhatsApp en un seul clic et faites-vous livrer rapidement !</p>
+            <a href="https://wa.me/212679602492?text=Bonjour%20Chawarmaz,%20je%20souhaite%20passer%20une%20commande." target="_blank" class="btn-whatsapp">
+                <i class="fab fa-whatsapp"></i> Commander sur WhatsApp
+            </a>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Chawarmaz Casablanca. Tous droits réservés.</p>
+    </footer>
+
+</body>
+                                                                                </html>
+  
