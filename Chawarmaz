@@ -1,0 +1,49 @@
+Tu es un développeur web expert en design front-end. Crée un site web complet (une seule page HTML/CSS/JS responsive) pour le restaurant "Chawarmaz" à Casablanca, en utilisant exactement les informations ci-dessous.
+
+### Informations sur le restaurant :
+- Nom : Chawarmaz
+- Note : 4.2 ★ (143 avis Google)
+- Prix par personne : 1–50 MAD (signalé par 21 personnes)
+- Type : Restaurant, street food (kebab, tacos, cordon bleu)
+- Adresse : rabie, 12 Bd Oued Oum Rabia, Casablanca 20000
+- Téléphone : 06 79 60 24 92
+- Horaires : Ouvert, ferme à 00h00 (minuit)
+- Plats végétariens : oui (mention "Serves vegetarian dishes")
+- Livraison : via Glovo (lien : glovoapp.com) et livraison à domicile à partir de 10 DH
+- Réseaux sociaux : Instagram @chawarmaz (5,6k+ abonnés)
+- Heures d'affluence : généralement plus fréquenté que d'habitude en ce moment, mais pas d'attente habituelle
+- Durée moyenne de visite : 10–45 minutes
+
+### Menu (avec prix) :
+- Kebab – 30 MAD
+- Tacos – 25 MAD
+- Cordon Bleu – 30 MAD
+- Coca-Cola – (prix non précisé, laisser "à partir de 10 DH" ou "en supplément")
+
+### Éléments de design demandés :
+- Design moderne, chaleureux, style street food / fast-food.
+- Palette de couleurs : orange, blanc, gris foncé (inspiration shawarma).
+- Responsive (mobile, tablette, desktop).
+- Sections obligatoires :
+  1. **Hero** : nom, note étoilée, slogan ("Le vrai goût qui te fait craquer" issu de l’Instagram).
+  2. **À propos** : courte description + adresse, horaire, temps de visite.
+  3. **Menu** : afficher les plats avec prix et une petite icône/illustration.
+  4. **Livraison** : mention "Livraison à domicile à partir de 10 DH" + lien Glovo.
+  5. **Avis** : extrait de la note Google 4.2★ (143 avis) + quelques étoiles.
+  6. **Horaires populaires** : graphique simple (barres ou texte) montrant que le midi et soir sont chargés.
+  7. **Contact & localisation** : carte Google Maps intégrée (avec l’adresse exacte), téléphone cliquable, lien Instagram.
+  8. **Footer** : copyright, liens vers les réseaux.
+
+### Fonctionnalités interactives :
+- Bouton "Commander sur Glovo" qui ouvre glovoapp.com dans un nouvel onglet.
+- Bouton "Appeler" qui lance l’appel téléphonique.
+- Effet hover sur les cartes du menu.
+- Un petit indicateur "Live : plus fréquenté que d'habitude" (comme sur Google).
+
+### Contraintes techniques :
+- Code propre, bien structuré (HTML5, CSS3, JavaScript si nécessaire).
+- Utiliser Font Awesome ou Bootstrap Icons pour les icônes.
+- Police sans-serif (Google Fonts : Poppins ou Inter).
+- Pas d’images externes obligatoires, mais tu peux utiliser des placeholders ou des emojis (🍢, 🥤, etc.) ou générer des SVG simples.
+
+Génère le code complet (HTML/CSS/JS) prêt à être copié dans un fichier .html et affiché dans un navigateur.
